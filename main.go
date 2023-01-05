@@ -3,6 +3,7 @@ package main
 import (
 	"management/db"
 	"management/handler"
+	"management/server"
 
 	"go.uber.org/fx"
 	"go.uber.org/fx/fxevent"
@@ -18,9 +19,10 @@ func main() {
 			db.NewDatabaseConnection,
 			zap.NewProduction,
 			handler.NewUserHandler,
+			server.NewServer,
 		),
 		fx.Invoke(
-			NewServer,
+			server.NewServer,
 		),
 	).Run()
 }
