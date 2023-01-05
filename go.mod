@@ -1,3 +1,9 @@
+// вообще судя по зависмиостям у тебя ни один не исползуется в проекте, об этом говорит inderect
+// чтобы поправить, и не грузить лишнего можешь использовать `go mod tidy`, который отвечает за
+// очистку от таких явных косяков
+//
+// гл. Synchronizing your code’s dependencies: https://go.dev/doc/modules/managing-dependencies
+//
 module management
 
 go 1.18
